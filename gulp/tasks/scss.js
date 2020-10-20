@@ -14,7 +14,9 @@ const scssProcessing = () => {
   return src(config.src.scss)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([autoprefixer, cssnano]))
+    .pipe(postcss([autoprefixer]))
+    .pipe(dest(config.dest.css))
+    .pipe(postcss([cssnano]))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
     .pipe(dest(config.dest.css));

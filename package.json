@@ -8,11 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/kolenov/askmumm.git"
+    "url": "git+ssh:https://github.com/Andrey-Ionel/Partfolio.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/kolenov/askmumm#readme",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.0.1",
