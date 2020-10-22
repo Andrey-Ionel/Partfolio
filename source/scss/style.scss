@@ -129,7 +129,7 @@ body {
    	position: fixed;
    	background-color: $bg-brand;
    	overflow: auto;
-   	left: -100%;
+   	left: -200%;
    	width: 500px; 
    	height: inherit;
    	top: 80px;
@@ -372,4 +372,42 @@ header {
 	&:before {
 		background-color: $bg-brand-dark;
 	}
+}
+.parallax {
+	height: calc(100vh - 160px);
+	margin: 0 0 $step;
+	background: url(../img/parallax.svg) no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+.dark-theme .parallax {
+	background: url(../img/dark.jpg) no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+.skills {
+	margin: 0 0 $step;
+	background-color: $bg-content;
+	padding: $step;
+	.skills-head {
+		font-size: 80px;
+		font-weight: 900;
+		}
+	.skills-list {
+		padding-top: 32px;
+		font-size: 32px;
+	}			
+}	
+.dark-theme .skills {
+	background-color: $bg-content-dark;
+}
+.projects {
+	height: calc(100vh - 160px);
+	margin: 0 0 $step;
+	background: url(../img/parallax2.png) no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }

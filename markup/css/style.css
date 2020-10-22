@@ -165,7 +165,7 @@ body {
   position: fixed;
   background-color: #56caa5;
   overflow: auto;
-  left: -100%;
+  left: -200%;
   width: 500px;
   height: inherit;
   top: 80px;
@@ -371,3 +371,39 @@ header {
     background-color: #002e45; }
   .dark-theme .menu-open .burger-menu-lines:before {
     background-color: #002e45; }
+
+.parallax {
+  height: calc(100vh - 160px);
+  margin: 0 0 80px;
+  background: url(../img/parallax.svg) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
+.dark-theme .parallax {
+  background: url(../img/dark.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
+.skills {
+  margin: 0 0 80px;
+  background-color: #dbffd7;
+  padding: 80px; }
+  .skills .skills-head {
+    font-size: 80px;
+    font-weight: 900; }
+  .skills .skills-list {
+    padding-top: 32px;
+    font-size: 32px; }
+
+.dark-theme .skills {
+  background-color: #8e95a7; }
+
+.projects {
+  height: calc(100vh - 160px);
+  margin: 0 0 80px;
+  background: url(../img/parallax2.png) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
