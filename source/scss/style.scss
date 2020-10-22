@@ -6,15 +6,6 @@ body {
 	font-family: Roboto, Arial, sans-serif;
 	color: $text-color;
 }
-.btn {
-	border: 2px solid $brand-color;
-	color: $brand-color;
-	background: none;
-	outline: none;
-	position: absolute;
-    top: 30px;
-    right: 30px;
-}
 .wrapper {
 	padding: $step;
 }
@@ -26,17 +17,85 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 30;
+	pointer-events:none;
 }
+/*button style*/
+.btn {
+	color: $brand2-color;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 700;
+    letter-spacing: .05em;
+	position: relative;
+	display: inline-block;
+	pointer-events: auto;
+	.btn-span {
+	    position: relative;
+	    z-index: 1;
+	    display: block;
+	    min-width: 6px;
+	    padding: 6px;
+	    border-radius: 8px;
+	    background-color: $bg-brand;
+	    border: 1px solid darken($bg-brand, 5%);
+	    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
+	    transition: transform .1s, box-shadow .2s, background-color .2s;
+	}    
+	&::after {
+	    content: '';
+	    position: absolute;
+	    top: -10px;
+	    bottom: -10px;
+	    left: -10px;
+	    right: -10px;
+	    border-radius: 12px;
+	    box-shadow: 0 0 0px rgba(0,0,0,0.2), inset 0 0 0px rgba(0,0,0,0.2);
+	    transition: box-shadow .1s;
+	}
+	&:hover,
+	&:focus {
+	   .btn-span {
+	      		background-color: lighten($bg-brand, 3%);
+	    }
+	}
+	&:active {
+		.btn-span {
+		      background-color: $bg-brand;
+		      transform: scale(0.97);
+		      box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+		}	
+	&::after {
+	      box-shadow: 0 0 2px rgba(0,0,0,0.2), inset -3px 3px 1em rgba(0,0,0,0.2);
+    }
+	}
+}
+.wrap {
+	width: 100%;
+    text-align: right;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.btn {
+	margin: 13px;
+}
+/*button style*/
+
+/*Burger style*/
 .burger-menu-button {
 	position: fixed;
 	top: 50%;
 	margin: -34px 0 0;
-	left: 45px;
-	z-index: 2;
+	left: 5px;
+	z-index: 4;
     width: 68px;
     height: 68px;
-    background-color: transparent;
-		.burger-menu-lines {
+    background-color: transparent;  
+	.burger-menu-lines {
 		position: absolute;
 	    width: 48px;
 	    height: 5px;
@@ -45,60 +104,115 @@ body {
 	    top: 50%;
 	    left: 50%;
 	    transform: translate(-50%, -50%);
-		&:after {
-			content: "";
-		    top: 13px;
-			position: absolute;
-	    	width: 48px;
-	    	height: 5px;
-	    	background-color: $brand-color;
-	    	transition: 0.5s;
-	    }	
-		&:before {
-			content: "";
-		    top: -13px;
-	    	position: absolute;
-	    	width: 48px;
-	    	height: 5px;
-	    	background-color: $brand-color;
-	    	transition: 0.5s;
-		}
+			&:after {
+				content: "";
+			    top: 13px;
+				position: absolute;
+		    	width: 48px;
+		    	height: 5px;
+		    	background-color: $brand-color;
+		    	transition: 0.5s;
+	    	}	
+			&:before {
+				content: "";
+			    top: -13px;
+		    	position: absolute;
+		    	width: 48px;
+		    	height: 5px;
+		    	background-color: $brand-color;
+		    	transition: 0.5s;
+			}
 	}
 }
-	.nav {
-		padding-top: 40px;
-    	position: fixed;
-    	background-color: #000;
-    	overflow-y: auto;
-    	top: -100%;
-    	transition: 0.5s;
-    	height: 100%;
-    	width: 100%;
-		left: 0;
-		transition: 1s;
-	}
+.nav {
+	padding-top: 40px;
+   	position: fixed;
+   	background-color: $bg-brand;
+   	overflow: auto;
+   	left: -100%;
+   	width: 500px; 
+   	height: inherit;
+   	top: 80px;
+	transition: 2s;
+	display: flex;
+    justify-content: center;
+    border-right: 2px solid $brand2-color;
+    z-index: 3;
 	.nav-item {
-    	margin: 0 10px;
-    	padding: 0 0 174px;
-    	display: flex;
-    	align-items: center;
-	}
-	.nav-item a {
-    	padding: 30px;
-    	font-family: sans-serif;
-    	font: 20px/24px Montserrat;
-    	text-decoration: none;
-    	color: #fff;
-    	opacity: 0.8;
-    }
+	   	margin: 0 10px;
+	   	display: flex;
+	   	align-items: center;
+		.nav-item-link {
+			padding: 16px 0 0;
+    		margin-bottom: 16px;
+		   	height: 100%;
+		   	font: 32px Roboto, Arial, sans-serif;
+		   	font-weight: 900;
+		   	color: $text-color;
+		  	opacity: 0.8;
+		  	text-decoration: none;
+		  	cursor: pointer;
+				&:hover {
+					border-bottom: 2px solid $brand2-color;
+				}	
+		}
+		.nav-item-link.telephone {
+	   		font-size: 18px;
+	   		padding: 80px 0;
+	   		border: none;
+
+	   	}
+	   	.email-text {
+	   		color: $brand2-color;
+	   	}
+	}	
+}
+		
+/*.burger-menu-overlay {
+    	display: none;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	margin-top: 600px;
+	}*/
+.menu-open .nav {    
+    	left: 0;
+    	background-color: $bg-color;    
+    	width: 500px;
+    	height: inherit;
+    	transition: 1s;
+}
+.menu-open .burger-menu-button,
+.menu-open .burger-menu-lines {
+	background-color: transparent;
+}
+.menu-open .burger-menu-button {
+	left: 0;
+}
+.menu-open .burger-menu-lines::before {
+    top: 0;
+   	transform: rotate(45deg);
+   	background-color: $brand-color;
+   	transition: 0.5s;
+}
+.menu-open .burger-menu-lines::after {
+    top: 0;
+   	transform: rotate(-45deg);
+   	background-color: $brand-color;
+   	transition: 0.5s;
+}
+/*Burger style*/	
 .links {
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: 25px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	.link-item {
+		padding: 10px 0;
+	}
 }
 .gradient-text {
 	position: absolute;
@@ -115,22 +229,21 @@ body {
 .info {
 	position: relative;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	&-text {
 		opacity: 0;
 		display: block;
 		font-size: 24px;
 		background-image: linear-gradient(43deg, $text-color 20%, $brand2-color 40%, $bg-content 60%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-background-clip: text;
-	-moz-text-fill-color: transparent;
-		position: absolute;
-	    width: 340px;
-	    margin: -12px 0 0 -170px;
-	    top: 50%;
-	    left: 50%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-background-clip: text;
+		-moz-text-fill-color: transparent;
+		width: 340px;
 	}
-	
 }
 .hero {
 	background: $bg-content;
@@ -140,7 +253,7 @@ body {
     height: inherit;
     transition: width 2s;
     &-text {
-		display: block;
+		display:block;
 		width: 400px;
 		font-size: 70px;
 		font-style: italic;
@@ -159,7 +272,7 @@ body {
 	    height: 0;
 	    border-style: solid;
 	    border-width: 0 100px 100px 0;
-	    border-color: transparent #fff transparent transparent;
+	    border-color: transparent $bg-color transparent transparent;
 	    position: absolute;
 	    right: 0;
 	    top: 0;
@@ -179,7 +292,7 @@ header {
 	    height: 0;
 	    border-style: solid;
 	    border-width: 100px 0 0 720px;
-	    border-color: transparent transparent transparent #dbffd7;
+	    border-color: transparent transparent transparent $bg-content;
 	    position: absolute; 
 	    bottom: 0; 
 	    left: 0; 
@@ -202,5 +315,61 @@ header {
 			}
 		}
 	}	
+	}
+}
+/*Dark theme*/
+.dark-theme header {
+	background: $bg-brand-dark;
+	&:before {
+		border-color: transparent transparent transparent $bg-content-dark;
+	}	
+}	
+.dark-theme .hero {
+	background: $bg-content-dark;
+	&-text {
+		color:$bg-color;
+	}
+}
+.dark-theme .info {
+	&-text {
+				background-image: linear-gradient(43deg, $text-color-dark 20%, $brand2-color 40%, $bg-content 60%);
+	}
+}
+.dark-theme .btn  {
+	.dark-theme .btn-span {
+		background-color: $bg-brand-dark;
+		border: 1px solid darken($bg-brand-dark, 5%);
+	}
+		&:hover,
+		&:focus {
+		   .btn-span {
+		      		background-color: lighten($bg-brand-dark, 3%);
+		    }
+		}
+		&:active {
+			.btn-span {
+			      background-color: $bg-brand-dark;
+			}
+		}
+}
+.dark-theme .svg-fill * {
+			fill:$bg-brand-dark;
+} 
+.dark-theme .burger-menu-lines {
+	background-color: $bg-brand-dark;
+	&:after {
+		background-color: $bg-brand-dark;
+	}	
+	&:before {
+		background-color: $bg-brand-dark;
+	}
+}
+.dark-theme .menu-open .burger-menu-lines {
+	background-color: transparent;
+	&:after {
+		background-color: $bg-brand-dark;
+	}	
+	&:before {
+		background-color: $bg-brand-dark;
 	}
 }
