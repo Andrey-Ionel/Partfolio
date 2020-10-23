@@ -154,6 +154,9 @@ body {
 		  	cursor: pointer;
 				&:hover {
 					border-bottom: 2px solid $brand2-color;
+				}
+				.arrow {
+					padding: 5px;
 				}	
 		}
 		.nav-item-link.telephone {
@@ -165,6 +168,7 @@ body {
 	   	.email-text {
 	   		color: $brand2-color;
 	   	}
+
 	}	
 }
 		
@@ -214,6 +218,19 @@ body {
 		padding: 10px 0;
 	}
 }
+.scroll {
+	position: fixed;
+	bottom: 75px;
+	right: 2px;
+	.scroll-text {
+		display: block;
+		transform: rotate(90deg);
+		.arrow-bottom {
+			transform: rotate(-90deg);
+			padding: 10px 14px 0 0;
+		}
+	}
+}	
 .gradient-text {
 	position: absolute;
 	top: 30px;
@@ -332,7 +349,7 @@ header {
 }
 .dark-theme .info {
 	&-text {
-				background-image: linear-gradient(43deg, $text-color-dark 20%, $brand2-color 40%, $bg-content 60%);
+				background-image: linear-gradient(43deg, $bg-content-dark 20%, $brand2-color 40%, $bg-content 60%);
 	}
 }
 .dark-theme .btn  {
@@ -398,16 +415,73 @@ header {
 	.skills-list {
 		padding-top: 32px;
 		font-size: 32px;
+		position: relative;
+		/*.html-css {
+			width: 14px;
+			height: 14px;
+			background-color: $brand2-color;
+			position: absolute;
+		    bottom: 0;
+		    left: 40%;
+		    border-radius: 15px;
+		}*/
+		&:after {
+			content: "";
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    border: 10px solid $brand2-color;
+		    position: absolute; 
+		    bottom: 0; 
+		    left: 40%; 
+		    border-radius: 15px;
+		}
 	}			
-}	
+}
+.skills:hover {
+	.skills-list {
+		&:after{
+			    border-width: 10px 500px 10px 10px;
+			    transition: 3s;
+		}
+	}
+}
 .dark-theme .skills {
 	background-color: $bg-content-dark;
 }
 .projects {
-	height: calc(100vh - 160px);
 	margin: 0 0 $step;
 	background: url(../img/parallax2.png) no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+	.projects-text {
+		padding: $step;
+		font-size: 32px;
+		width: 100%;
+		height: 100%;
+		color: $bg-color;
+		background-color: $bg-projects;
+		.projects-head {
+			font-size: 80px;
+			font-weight: 900;
+			color: $bg-brand;
+		}
+		.term {
+			padding: $step 0 40px;
+			font-weight: 900;
+		}
+		.git-link {
+			color: $brand2-color;
+			font-size: 18px;
+		}
+
+	}
 }
+.dark-theme .projects {
+	.projects-text {
+		.projects-head {
+					color: $bg-content-dark;
+		}
+	}			
+}		
