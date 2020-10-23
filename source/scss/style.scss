@@ -440,9 +440,9 @@ header {
 }
 .skills:hover {
 	.skills-list {
-		&:after{
-			    border-width: 10px 500px 10px 10px;
-			    transition: 3s;
+		&:after {
+			border-width: 10px 500px 10px 10px;
+			transition: 3s;
 		}
 	}
 }
@@ -462,6 +462,7 @@ header {
 		height: 100%;
 		color: $bg-color;
 		background-color: $bg-projects;
+		opacity: 0;
 		.projects-head {
 			font-size: 80px;
 			font-weight: 900;
@@ -475,8 +476,7 @@ header {
 			color: $brand2-color;
 			font-size: 18px;
 		}
-
-	}
+	}	
 }
 .dark-theme .projects {
 	.projects-text {
@@ -485,3 +485,8 @@ header {
 		}
 	}			
 }		
+.projects:hover {
+	.projects-text {
+		opacity: 1;
+	}
+}

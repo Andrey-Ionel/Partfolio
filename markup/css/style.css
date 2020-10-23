@@ -449,7 +449,8 @@ header {
     width: 100%;
     height: 100%;
     color: #fff;
-    background-color: #353535; }
+    background-color: #353535;
+    opacity: 0; }
     .projects .projects-text .projects-head {
       font-size: 80px;
       font-weight: 900;
@@ -463,3 +464,6 @@ header {
 
 .dark-theme .projects .projects-text .projects-head {
   color: #8e95a7; }
+
+.projects:hover .projects-text {
+  opacity: 1; }
