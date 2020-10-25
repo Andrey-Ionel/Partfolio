@@ -200,13 +200,6 @@ body {
       color: #f92672;
       font-style: italic; }
 
-/*.burger-menu-overlay {
-    	display: none;
-    	position: fixed;
-    	top: 0;
-    	left: 0;
-    	margin-top: 600px;
-	}*/
 .menu-open .nav {
   left: 0;
   background-color: #fff;
@@ -254,7 +247,7 @@ body {
     transform: rotate(90deg); }
     .scroll .scroll-text .arrow-bottom {
       transform: rotate(-90deg);
-      padding: 10px 14px 0 0; }
+      padding: 10px 15px 0 0; }
 
 .gradient-text {
   position: absolute;
@@ -429,7 +422,7 @@ header {
       background-color: #f92672;
       position: absolute;
       bottom: 0;
-      left: 30%;
+      left: 35%;
       border-radius: 15px;
       transition: 1s; }
     .skills .skills-list:after {
@@ -441,7 +434,7 @@ header {
       border-width: 7px 600px 7px 7px;
       position: absolute;
       bottom: 0;
-      left: 30%;
+      left: 35%;
       border-radius: 15px;
       opacity: 0;
       transition: 0.5s; }
@@ -583,7 +576,8 @@ footer {
     bottom: 0;
     left: -70px; }
     footer .up a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #272822; }
       footer .up a .up-text {
         display: block;
         transform: rotate(-90deg); }
@@ -592,3 +586,161 @@ footer {
 
 .dark-theme .experience {
   background-color: #8e95a7; }
+
+/* tablet */
+@media only screen and (min-width: 767px) and (max-width: 1100px) {
+  header:before {
+    display: none; }
+  header:hover .hero {
+    height: 70%;
+    transition: 2s ease; }
+    header:hover .hero-text {
+      transform: rotate(-90deg);
+      margin: -35px 0 0 -280px;
+      transition: 2s ease; }
+  .hero {
+    transition: height 0.8s, width 2s; }
+  .skills .skills-list .progress {
+    bottom: -25px;
+    left: 40%; }
+  .skills .skills-list:after {
+    border-width: 7px 300px 7px 7px;
+    bottom: -25px;
+    left: 40%; }
+  .skills:hover .skills-list .html-css {
+    width: 300px; }
+  .skills:hover .skills-list .responsive {
+    width: 200px; }
+  .skills:hover .skills-list .bootstrap {
+    width: 175px; }
+  .skills:hover .skills-list .jquery {
+    width: 125px; }
+  .skills:hover .skills-list .preprpocessors {
+    width: 200px; }
+  .skills:hover .skills-list .gulp {
+    width: 190px; }
+  .skills:hover .skills-list .git {
+    width: 250px; } }
+
+/* mobile */
+@media only screen and (min-width: 0px) and (max-width: 766px) {
+  .wrapper {
+    min-width: 320px;
+    padding: 60px; }
+  header:before {
+    display: none; }
+  header:hover .hero {
+    height: 70%;
+    transition: 2s ease; }
+    header:hover .hero-text {
+      transform: rotate(-90deg);
+      margin: -14px 0 0 -105px;
+      transition: 2s ease; }
+  .hero {
+    opacity: 0.3;
+    transition: 2s ease; }
+    .hero-text {
+      display: block;
+      width: 180px;
+      font-size: 28px;
+      margin: -14px 0 0 -80px;
+      top: 30%;
+      transition: height 0.8s, width 2s, transform 2s margin 2s; }
+    .hero:after {
+      display: none; }
+  .info-text {
+    opacity: 1;
+    width: 200px; }
+  .burger-menu-button {
+    top: 10%;
+    z-index: 40;
+    width: 48px;
+    height: 48px;
+    margin: 0; }
+  .nav {
+    width: 300px;
+    padding-top: 20px; }
+    .nav .nav-item .nav-item-link {
+      font: 28px Roboto, Arial, sans-serif; }
+    .nav .nav-item .nav-item-link.telephone {
+      font-size: 16px;
+      padding: 40px 0; }
+  .menu-open .nav {
+    width: 300px; }
+  .links {
+    right: 18px; }
+  .parallax {
+    background-position: 100%; }
+  .skills {
+    padding: 40px 10px; }
+    .skills:after {
+      display: none; }
+    .skills .skills-head {
+      font-size: 28px;
+      font-weight: 900; }
+    .skills .skills-list {
+      padding-top: 32px;
+      font-size: 14px;
+      position: relative; }
+      .skills .skills-list .progress {
+        width: 10px;
+        height: 10px;
+        bottom: -25px;
+        left: 20%; }
+      .skills .skills-list:after {
+        border-width: 5px 100px 5px 5px;
+        bottom: -25px;
+        left: 20%;
+        opacity: 0.2;
+        transition: 0.5s; }
+  .skills:hover .skills-list .html-css {
+    width: 100px; }
+  .skills:hover .skills-list .responsive {
+    width: 65px; }
+  .skills:hover .skills-list .bootstrap {
+    width: 55px; }
+  .skills:hover .skills-list .jquery {
+    width: 40px; }
+  .skills:hover .skills-list .preprpocessors {
+    width: 65px; }
+  .skills:hover .skills-list .gulp {
+    width: 60px; }
+  .skills:hover .skills-list .git {
+    width: 80px; }
+  .projects {
+    background-position: 103%; }
+    .projects .projects-text {
+      padding: 40px 10px;
+      font-size: 14px; }
+      .projects .projects-text .projects-head {
+        font-size: 28px;
+        font-weight: 900; }
+      .projects .projects-text .term {
+        padding: 80px 0 40px;
+        font-weight: 900; }
+      .projects .projects-text .git-link {
+        font-size: 12px; }
+  .experience {
+    padding: 40px 10px;
+    font-size: 14px; }
+    .experience:after {
+      display: none; }
+    .experience .experience-head {
+      font-size: 28px; }
+    .experience .period {
+      font-size: 14px; }
+    .experience .term-exp {
+      line-height: 14px; }
+    .experience .certificate-link {
+      font-size: 12px; }
+  footer .contact .footer-email {
+    font: 14px Roboto, Arial, sans-serif; }
+    footer .contact .footer-email .arrow {
+      padding: 5px 5px 0; }
+  footer .contact .footer-email-text {
+    font-size: 12px; }
+  footer .footer-telephone {
+    font-size: 12px;
+    padding-top: 0; }
+  footer .up a .up-text {
+    padding-left: 30px; } }
