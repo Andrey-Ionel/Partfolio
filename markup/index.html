@@ -25,13 +25,13 @@
                 <nav class="nav">
                     <ul>
                         <li class="nav-item">
-                            <a class="nav-item-link" href="">Skills</a>
+                            <a class="nav-item-link" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-link" href="">Projects</a>
+                            <a class="nav-item-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item-link" href="">Experience</a>
+                            <a class="nav-item-link" href="#experience">Experience</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-item-link telephone" href="tel:+38 063 688 14 26">+38 063 688 14 26</a>
@@ -73,21 +73,33 @@
                 </div>
             </header>
             <section class="parallax"></section>
-            <section class="skills">
+            <section class="skills" id="skills">
                 <h2 class="skills-head">SKILLS</h2>
                 <ul>
                     <li class="skills-list">HTML/CSS
-                        <span class="html-css"></span>
+                        <span class="html-css progress"></span>
                     </li>
-                    <li class="skills-list">Responsive layout</li>
-                    <li class="skills-list">Bootstrap</li>
-                    <li class="skills-list">jQuery</li>
-                    <li class="skills-list">CSS Preprocessors</li>
-                    <li class="skills-list">gulp</li>
-                    <li class="skills-list">Git</li>
+                    <li class="skills-list">Responsive layout
+                        <span class="responsive progress"></span>
+                    </li>
+                    <li class="skills-list">Bootstrap
+                        <span class="bootstrap progress"></span>
+                    </li>
+                    <li class="skills-list">jQuery
+                        <span class="jquery progress"></span>
+                    </li>
+                    <li class="skills-list">CSS Preprocessors
+                        <span class="preprpocessors progress"></span>
+                    </li>
+                    <li class="skills-list">gulp
+                        <span class="gulp progress"></span>
+                    </li>
+                    <li class="skills-list">Git
+                        <span class="git progress"></span>
+                    </li>
                 </ul> 
             </section>
-            <section class="projects">
+            <section class="projects" id="projects">
                 <div class="projects-text">
                     <h2 class="projects-head">PROJECTS</h2>
                     <dl>
@@ -104,10 +116,34 @@
                     </dl>
                 </div>
             </section>
-            <section class="experience">
-                <h2>EXPERIENCE</h2>
+            <section class="experience" id="experience">
+                <h2 class="experience-head">EXPERIENCE</h2>
+                <dl>
+                        <span class="period">august 2020 - october 2020</span>
+                        <dt class="term-exp">IT school Hillel</dt>
+                        <dd class="description-exp">Front-end basic course</dd>
+                        <a class="certificate-link" href="#">certificate
+                        </a>
+                        <span class="period">november 2020 - now</span>
+                        <dt class="term-exp">IT school Hillel</dt>
+                        <dd class="description-exp">Front-end pro course</dd>
+                        <a class="certificate-link" href="#">certificate
+                        </a>
+                </dl>        
             </section>
-        </div> 
+            <footer>
+                <div class="contact">
+                    <span class="footer-email-text">Whant to collaborate?</span>
+                    <a class="footer-email" href="mailto:andrey.ivanov688@gmail.com">email me<img class="arrow" src="img/arrow-black-right.svg"></a>
+                </div>
+                <a class="footer-telephone" href="tel:+38 063 688 14 26">+38 063 688 14 26</a>
+                <div class="up">
+                    <a href="#body">
+                        <span class="up-text">UP<img class="arrow-up" src="img/arrow-black-right.svg"></span> 
+                    </a>  
+                </div>
+            </footer>
+        </div>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="js/burger.js"></script>

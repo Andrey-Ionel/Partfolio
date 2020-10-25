@@ -167,6 +167,7 @@ body {
 	   	}
 	   	.email-text {
 	   		color: $brand2-color;
+	   		font-style: italic;
 	   	}
 
 	}	
@@ -408,6 +409,19 @@ header {
 	margin: 0 0 $step;
 	background-color: $bg-content;
 	padding: $step;
+	position: relative;
+	&:after {
+    	content: "";
+	    display: inline-block;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 100px 100px 0;
+	    border-color: transparent $bg-color transparent transparent;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	}
 	.skills-head {
 		font-size: 80px;
 		font-weight: 900;
@@ -416,33 +430,65 @@ header {
 		padding-top: 32px;
 		font-size: 32px;
 		position: relative;
-		/*.html-css {
+		.progress {
 			width: 14px;
 			height: 14px;
 			background-color: $brand2-color;
 			position: absolute;
 		    bottom: 0;
-		    left: 40%;
+		    left: 30%;
 		    border-radius: 15px;
-		}*/
+		    transition: 1s;
+		}
 		&:after {
 			content: "";
 		    display: inline-block;
 		    width: 0;
 		    height: 0;
-		    border: 10px solid $brand2-color;
+		    border: solid $brand2-color;
+		    border-width: 7px 600px 7px 7px;
 		    position: absolute; 
 		    bottom: 0; 
-		    left: 40%; 
+		    left: 30%; 
 		    border-radius: 15px;
+		    opacity: 0;
+		    transition: 0.5s;
 		}
 	}			
 }
 .skills:hover {
 	.skills-list {
 		&:after {
-			border-width: 10px 500px 10px 10px;
-			transition: 3s;
+			opacity: 0.2;
+			transition: 0.5s;
+		}
+		.html-css {
+			width: 600px;
+			transition: 1s;
+		}
+		.responsive {
+			width: 400px;
+			transition: 1s;
+		}
+		.bootstrap {
+			width: 350px;
+			transition: 1s;
+		}
+		.jquery {
+			width: 250px;
+			transition: 1s;
+		}
+		.preprpocessors {
+			width: 400px;
+			transition: 1s;
+		}
+		.gulp {
+			width: 380px;
+			transition: 1s;
+		}
+		.git {
+			width: 500px;
+			transition: 1s;
 		}
 	}
 }
@@ -463,6 +509,7 @@ header {
 		color: $bg-color;
 		background-color: $bg-projects;
 		opacity: 0;
+		transition: 2s;
 		.projects-head {
 			font-size: 80px;
 			font-weight: 900;
@@ -475,6 +522,7 @@ header {
 		.git-link {
 			color: $brand2-color;
 			font-size: 18px;
+			font-style: italic;
 		}
 	}	
 }
@@ -488,5 +536,100 @@ header {
 .projects:hover {
 	.projects-text {
 		opacity: 1;
+		transition: 2s;
 	}
 }
+.dark-theme .projects {
+	background: url(../img/web-dark2.jpg) no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+.experience {
+	margin: 0 0 $step;
+	background-color: $bg-content;
+	padding: $step;
+	position: relative;
+	font-size: 32px;
+	&:after {
+    	content: "";
+	    display: inline-block;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 100px 100px 0;
+	    border-color: transparent $bg-color transparent transparent;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	}
+	.experience-head {
+		font-size: 80px;
+		font-weight: 900;
+	}
+	.period {
+		display: block;
+		color: $brand2-color;
+		font-size: 18px;
+		font-style: italic;
+		padding: $step 0 0;
+	}
+	.term-exp {
+			font-weight: 900;
+			line-height: 38px;
+	}
+	.certificate-link {
+		display: block;
+		color: $brand2-color;
+		font-size: 18px;
+		font-style: italic;
+		padding-top: 40px;
+	}
+}	
+footer {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	.contact {
+		.footer-email-text {
+			display: block;
+			color: $brand2-color;
+	   		font-style: italic;
+		}
+		.footer-email {
+			font: 32px Roboto, Arial, sans-serif;
+			font-weight: 900;
+			color: $text-color;
+			text-decoration: none;
+			&:hover {
+					border-bottom: 2px solid $brand2-color;
+			}
+			.arrow {
+				padding: 5px;
+			}
+		}
+	}
+	.footer-telephone {
+			padding-top: 35px;
+			text-decoration: none;
+			color: $text-color;
+	}
+	.up {
+		position: absolute;
+		bottom: 0;
+		left: -70px;
+		a {
+			text-decoration: none;
+			.up-text {
+				display: block;
+	    		transform: rotate(-90deg);
+				.arrow-up {
+						padding: 0px 0px 2px 10px;
+				}
+			}
+		}	
+	}
+}
+.dark-theme .experience {
+	background-color: $bg-content-dark;		
+}		
