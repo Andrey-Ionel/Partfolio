@@ -596,8 +596,9 @@ footer {
     color: #272822; }
   footer .up {
     position: absolute;
-    bottom: 0;
-    left: -70px; }
+    bottom: 30px;
+    left: -70px;
+    transition: 2.5s; }
     footer .up a {
       text-decoration: none;
       color: #272822; }
