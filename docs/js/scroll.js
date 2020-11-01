@@ -1,6 +1,6 @@
 $.fn.scrollBottom = function(scroll){
   if(typeof scroll === 'number'){
-    window.scrollTo(0,$(document).height() - $(window).height() - scroll);
+    window.scrollTop(0,$(document).height() - $(window).height() - scroll);
     return $(document).height() - $(window).height() - scroll;
   } else {
     return $(document).height() - $(window).height() - $(window).scrollTop();
@@ -32,7 +32,7 @@ if($(window).scrollBottom()<90){
 })
 
 $(window).scroll(function(){
-if($(window).scrollBottom()<1500 && $(window).scrollBottom()>800){
+if($(window).scrollBottom()<1450 && $(window).scrollBottom()>800){
       $('.hover-projects').css({opacity: 1}
     );
 }

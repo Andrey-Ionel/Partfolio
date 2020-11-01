@@ -526,6 +526,8 @@ header {
 		top: 70%;
 		right: 25px;
 		color: $brand2-color;
+		opacity: 0;
+		transition: 0.7s;
 		.hover-text {
 			display: block;
 			transform: rotate(90deg);

@@ -501,7 +501,9 @@ header {
     position: fixed;
     top: 70%;
     right: 25px;
-    color: #f92672; }
+    color: #f92672;
+    opacity: 0;
+    transition: 0.7s; }
     .projects .hover-projects .hover-text {
       display: block;
       transform: rotate(90deg); }
