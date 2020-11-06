@@ -32,7 +32,7 @@ if($(window).scrollBottom()<90){
 })
 
 $(window).scroll(function(){
-if($(window).scrollBottom()<1450 && $(window).scrollBottom()>800){
+if($(window).scrollBottom()<1400 && $(window).scrollBottom()>600){
       $('.hover-projects').css({opacity: 1}
     );
 }
