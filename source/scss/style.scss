@@ -522,21 +522,6 @@ header {
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	.hover-projects {
-		position: fixed;
-		top: 70%;
-		right: 25px;
-		color: $brand2-color;
-		opacity: 0;
-		transition: 0.7s;
-		.hover-text {
-			display: block;
-			transform: rotate(90deg);
-			.svg-color-hover {
-				transform: rotate(90deg);
-			}
-		}
-	} 
 	.projects-text {
 		padding: $step;
 		font-size: 32px;
@@ -563,14 +548,6 @@ header {
 	}	
 }
 .dark-theme .projects {
-	.hover-projects{
-		.hover-text {
-			color: $bg-content-dark;
-			.svg-color-hover * {
-				fill: $bg-content-dark;
-			}
-		}
-	}
 	.projects-text {
 		.projects-head {
 					color: $bg-content-dark;

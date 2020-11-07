@@ -32,12 +32,12 @@ if($(window).scrollBottom()<90){
 })
 
 $(window).scroll(function(){
-if($(window).scrollBottom()<1400 && $(window).scrollBottom()>600){
-      $('.hover-projects').css({opacity: 1}
+if($(window).scrollBottom()<1400 && $(window).scrollBottom()>500){
+      $('.projects-text').css({opacity: 1}
     );
 }
 else {
-            $('.hover-projects').css({opacity: 0}
+            $('.projects-text').css({opacity: 0}
     );
 
         }

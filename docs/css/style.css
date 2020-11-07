@@ -497,18 +497,6 @@ header {
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  .projects .hover-projects {
-    position: fixed;
-    top: 70%;
-    right: 25px;
-    color: #f92672;
-    opacity: 0;
-    transition: 0.7s; }
-    .projects .hover-projects .hover-text {
-      display: block;
-      transform: rotate(90deg); }
-      .projects .hover-projects .hover-text .svg-color-hover {
-        transform: rotate(90deg); }
   .projects .projects-text {
     padding: 80px;
     font-size: 32px;
@@ -529,11 +517,6 @@ header {
       color: #f92672;
       font-size: 18px;
       font-style: italic; }
-
-.dark-theme .projects .hover-projects .hover-text {
-  color: #8e95a7; }
-  .dark-theme .projects .hover-projects .hover-text .svg-color-hover * {
-    fill: #8e95a7; }
 
 .dark-theme .projects .projects-text .projects-head {
   color: #8e95a7; }
